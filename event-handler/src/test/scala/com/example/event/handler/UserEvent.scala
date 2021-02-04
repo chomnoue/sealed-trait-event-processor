@@ -5,7 +5,7 @@ sealed trait UserEvent {
 }
 
 final case class UserCreated(name:String, email:String) extends UserEvent
-trait UserChanged extends UserEvent
+sealed trait UserChanged extends UserEvent
 final case class NameChanged(name:String) extends UserChanged
 final case class EmailChanged(email:String) extends UserChanged
 case object UserDeleted extends UserEvent
