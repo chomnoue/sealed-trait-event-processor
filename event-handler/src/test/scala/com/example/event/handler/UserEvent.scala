@@ -1,9 +1,6 @@
 package com.example.event.handler
 
-sealed trait UserEvent {
-
-}
-
+sealed trait UserEvent
 final case class UserCreated(name:String, email:String) extends UserEvent
 sealed trait UserChanged extends UserEvent
 final case class NameChanged(name:String) extends UserChanged
