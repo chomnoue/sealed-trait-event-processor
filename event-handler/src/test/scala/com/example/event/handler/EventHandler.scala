@@ -4,7 +4,6 @@ trait EventHandler[Event] {
   def handle(event: Event)
 }
 
-
 class EventHandlerImpl[Event] extends (Event => Unit) {
   private var events: List[Event] = List()
 
@@ -12,4 +11,3 @@ class EventHandlerImpl[Event] extends (Event => Unit) {
 
   override def apply(event: Event): Unit = events :+= event
 }
-

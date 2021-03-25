@@ -2,7 +2,7 @@ name := "sealed-trait-event-processor"
 
 version := "0.1"
 
-scalaVersion in ThisBuild := "2.13.4"
+scalaVersion in ThisBuild := "2.13.5"
 run := run in Compile in `event-handler`
 
 lazy val `event-processor` = (project in file("event-processor")).settings(
